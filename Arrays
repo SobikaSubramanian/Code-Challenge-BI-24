@@ -1,0 +1,19 @@
+def find_largest_smallest(arr):
+    if not arr:
+        print("Array is empty.")
+        return
+    largest = smallest = arr[0]
+    for num in arr:
+        if num > largest:
+            largest = num
+        elif num < smallest:
+            smallest = num
+    print(f"Largest element: {largest}")
+    print(f"Smallest element: {smallest}")
+try:
+    n = int(input("Enter the number of elements: "))
+    user_input = input("Enter the elements: ")
+    integer_array = [int(x) for x in user_input.split()]
+    find_largest_smallest(integer_array)
+except ValueError:
+    print("Invalid input. Please enter valid integers.")
