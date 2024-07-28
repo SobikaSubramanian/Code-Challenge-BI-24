@@ -1,0 +1,23 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(n - i - 1):
+            if arr[j] > arr[j + 1]:
+                # Swap adjacent elements if they are in the wrong order
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        if not swapped:
+            break
+
+def main():
+    try:
+        num_elements = int(input("Enter the number of elements: "))
+        elements = list(map(int, input("Enter the elements: ").split()))
+        bubble_sort(elements)
+        print("Sorted array:", *elements)
+    except ValueError:
+        print("Invalid input. Please enter valid integers.")
+
+if __name__ == "__main__":
+    main()
