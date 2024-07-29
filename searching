@@ -1,0 +1,11 @@
+num = int(input("Enter the number of elements: "))
+lst = []
+for i in range(num):
+    ele = int(input("Enter an element: "))
+    lst.append(ele)
+print(lst)
+search = int(input("Enter the element to search: "))
+if search in lst:
+    print("The search element present in the list..")
+else:
+    print("Search element not found!")
